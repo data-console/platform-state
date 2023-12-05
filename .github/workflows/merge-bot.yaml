@@ -28,9 +28,6 @@ jobs:
       with:
         intervalSeconds: 10
         timeoutSeconds: 30
-        strategy: squash
-        labelsStrategy: atLeastOne
         labels: merge
-        ignoreLabelsStrategy: atLeastOne
         ignoreLabels: draft
-        comment: PR merged automaticaly by merge bot
+        comment: PR merged automatically by merge bot
