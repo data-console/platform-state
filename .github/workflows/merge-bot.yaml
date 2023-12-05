@@ -1,0 +1,32 @@
+name: Merge Bot
+
+on:
+  pull_request:
+    types:
+      - labeled
+      - ready_for_review
+      - review_request_removed
+      - review_requested
+      - synchronize
+      - unlabeled
+  pull_request_review:
+    types:
+      - dismissed
+      - submitted
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    name: Merge
+    steps:
+    - name: Merge
+      uses: KeisukeYamashita/auto-pull-request-merge@v1
+      with:
+        intervalSeconds: 10
+        timeoutSeconds: 30
+        strategy: squash
+        labelsStrategy: atLeastOne
+        labels: merge
+        ignoreLabelsStrategy: atLeastOne
+        ignoreLabels: draft
+        comment: PR merged automaticaly by merge bot
