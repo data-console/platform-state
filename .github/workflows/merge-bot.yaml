@@ -27,7 +27,7 @@ jobs:
       uses: KeisukeYamashita/auto-pull-request-merge@v1
       with:
         intervalSeconds: 10
-        timeoutSeconds: 30
+        timeoutSeconds: 180
         labels: merge
         ignoreLabels: draft
         comment: PR merged automatically by merge bot
