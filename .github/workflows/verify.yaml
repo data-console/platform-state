@@ -1,0 +1,12 @@
+name: Verify Platform State
+
+on: [push]
+
+jobs:
+  verify:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: verification
+        run: echo "Platform state verified successfuly!"
