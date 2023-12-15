@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: workspace-test-12
+  description: "some workspace"
+spec:
+  type: workspace
+  owner: "xwing-libra"
+  lifecycle: experimental
