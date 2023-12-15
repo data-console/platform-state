@@ -1,9 +1,11 @@
 name: Merge me!
 
 on:
-  check_suite:
+  workflow_run:
     types:
       - completed
+    workflows:
+      - 'Verify Platform State'
 
 jobs:
   merge-me:
