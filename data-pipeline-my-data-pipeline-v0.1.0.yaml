@@ -1,0 +1,16 @@
+apiVersion: allegro.com/v1alpha1
+kind: Deployment
+metadata:
+  name: "data-pipeline-my-data-pipeline-v0.1.0"
+  description: "Deployment descriptor of my-data-pipeline (v0.1.0) to MSC"
+spec:
+  deploymentType: data-pipeline
+  owner: xwing-libra
+  artifact:
+    type: airflow-dag-bag
+    path: artifactory/data-pipeline/my-data-pipeline/v0.1.0
+    version: v0.1.0
+  infrastructure:
+    type: scheduler
+    env: dev
+    ref: MSC
